@@ -5,9 +5,11 @@ using UnityEngine;
 public class SetNewTab : MonoBehaviour
 {
     [SerializeField] Transform panel;
+    [SerializeField] Transform itemsPanel;
     public void _SetTab()
     {
-        panel.SetSiblingIndex(transform.parent.childCount - 1);
-        transform.SetSiblingIndex(transform.parent.childCount - 1);
+        panel.SetAsLastSibling();
+        transform.SetAsLastSibling();
+        itemsPanel.SetAsLastSibling();
     }
 }
